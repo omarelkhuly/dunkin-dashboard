@@ -123,15 +123,15 @@ export default function MainHeader() {
 
       {/* Drawer للموبايل (بدون زر MENU) */}
       <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <Box sx={{ width: 250 }} role="presentation" onClick={() => setDrawerOpen(false)}>
-          <List>
+        <Box sx={{ width: 250 , fontWeight: "bold", color: "#000"}} role="presentation" onClick={() => setDrawerOpen(false)}>
+          <List sx={{ marginTop: "8%" }}>
             <ListItem button component={Link} to="/location">
               <ListItemText primary="LOCATIONS" />
             </ListItem>
             <ListItem button component={Link} to="/Delvery">
               <ListItemText primary="DELIVERY" />
             </ListItem>
-            <ListItem button onClick={() => navigate("/rewards")}>
+            <ListItem button component={Link} to="/rewards">
               <ListItemText primary="DUNKIN' REWARDS" />
             </ListItem>
             <ListItem button component={Link} to="/DunkinCard">
